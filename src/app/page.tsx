@@ -15,19 +15,15 @@ export const metadata: Metadata = {
 
 const Home = () => {
 
-  const linkVid1: string = "/video/Sarif-TV.mp4";
-  const linkVid2: string = "/video/Sarif-Testimony.mp4";
-
   return (
-    <main className="flex min-h-screen flex-col gap-20 items-center p-0">
-
+    <main className="flex flex-col gap-20 items-center p-0">
       {/* Hero */}
       <div className="w-full h-fit  px-2 py-4 md:p-6  flex flex-col justify-center items-center ">
         <h1 className="text-[#0D0D0D] text-center tracking-wide text-2xl md:text-[2rem] font-extrabold ">Envisioning A New Future With </h1>
         <h1 className="text-white text-center tracking-wide text-2xl md:text-[2rem] font-bold mb-10">Augmentation Technology</h1>
         <div className="md:w-11/12 lg:w-8/12">
           <Suspense fallback={<h1>Loading video....</h1>}>
-            <VideoComponent linkk={linkVid1} />
+            <VideoComponent linkk="/video/Sarif-TV.mp4" />
           </Suspense>
         </div>
       </div>
@@ -35,11 +31,11 @@ const Home = () => {
       {/* Company Exp */}
       <div className="flex flex-col md:flex-row md:gap-4 w-11/12 h-[40rem] md:h-[25rem] my-40">
         <div className="basis-1/2 h-full border-t-4 md:border-y-4 rounded-lg border-white content-center">
-          <p className="text-center lg:text-xl leading-relaxed p-12 font-semibold">
-            Wes are 10,000 - 17,000 diverse team made from multiple departments located at the heart of Detroit all working in harmony alongside with State-Of-The-Art Technology to improve efficiency
+          <p className="text-center text-xs lg:text-xl font-semibold">
+            We are 10,000 - 17,000 diverse team made from multiple departments located at the heart of Detroit all working in harmony alongside with State-Of-The-Art Technology to improve efficiency
             and quality of our Augmentations.
           </p>
-          <Button color="light" pill as={Link} href="/team" className="md:w-4/6 lg:w-2/6 mx-auto mb-10">
+          <Button color="light" pill as={Link} href="/team" className="md:w-4/6 lg:w-2/6 mx-auto mt-10">
             Check Out Our Teams
           </Button>
         </div>
@@ -80,7 +76,7 @@ const Home = () => {
         <p className="text-center text-[#0d0d0d] text-4xl font-bold w-4/6">Hesited For The Future?</p>
         <div className="w-full lg:w-8/12">
           <Suspense fallback={<h1>Loading video....</h1>}>
-            <VideoComponent linkk={linkVid2} />
+            <VideoComponent linkk="/video/Sarif-Testimony.mp4" />
           </Suspense>
         </div>
       </div>

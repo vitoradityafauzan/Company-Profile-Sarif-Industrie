@@ -11,7 +11,7 @@ import Marquee from "react-fast-marquee";
         { name: "Bell Tower", img: "/BellTower2.png" },
         { name: "Versa Life", img: "/VersaLife.png" },
         { name: "A.R.C", img: "/ARC.png" },
-        { name: "W.H.O", img: "/who.png" },
+        { name: "W.H.O", img: "/who.webp" },
         { name: "UNATCO", img: "/UNATCO.png" },
         { name: "FEMA", img: "/FEMA.webp" },
         { name: "DOD", img: "/DOD.png" },
