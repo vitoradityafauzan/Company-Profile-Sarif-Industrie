@@ -42,18 +42,3 @@ body {
   background: #c7c7c7;
 /* background: linear-gradient(180deg, rgba(217,160,54,1) 0%, rgba(242,231,80,1) 100%); */
 }
-
-#gradient-top {
-  background: rgb(255,255,255);
-background: radial-gradient(circle at top left, rgba(255,255,255,1) 0%, rgba(242,231,80,1) 23%);
-}
-
-#radial-blurry {
-  background: rgb(217,160,54);
-background: linear-gradient(180deg, rgba(217,160,54,1) 30%, rgba(254,239,33,1) 100%);
-}
-
-#photo-banner {
-  background: rgb(255,255,255);
-  background: linear-gradient(146deg, rgba(255,255,255,1) 0%, rgba(255,251,159,1) 100%);
-}

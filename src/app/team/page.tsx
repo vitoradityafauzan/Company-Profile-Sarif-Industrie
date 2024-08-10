@@ -6,6 +6,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Sarif Industries | Team",
   description: "In This Page, Contain List Of Our Teams",
+  icons: {icon: "/Sariflogoblack.png"},
 };
 
 async function getData(amount: number) {
@@ -28,7 +29,7 @@ export default async function Team() {
   const staff: StaffList[] = await getData(12);
 
   return (
-    <div className="flex flex-col min-h-screen gap-10 items-center px-2 mt-6 lg:mt-14">
+    <div className="flex flex-col gap-10 min-h-screen items-center px-2 mt-6 lg:mt-14">
       <h1 className="w-5/6 text-center text-[#0d0d0d] font-bold text-2xl leading-tight">Meet The People Behind <span className="text-white">Sarif Industries</span></h1>
 
       {/* CEO Card */}

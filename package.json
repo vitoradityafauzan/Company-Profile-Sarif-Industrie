@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "contentful-resolve-response": "^1.9.0",
     "flowbite": "^2.4.1",
     "flowbite-react": "^0.10.1",
     "next": "14.2.5",
@@ -17,6 +18,7 @@
     "react-fast-marquee": "^1.6.5"
   },
   "devDependencies": {
+    "@types/contentful-resolve-response": "^0.1.33",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

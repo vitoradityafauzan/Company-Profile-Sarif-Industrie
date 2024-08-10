@@ -19,7 +19,7 @@ export default function Nav() {
           <NavbarLink as={Link} href="/about" className="text-white font-bold hover:bg-[#b1b1b1] md:text-lg md:hover:text-[#0D0D0D]">
             About
           </NavbarLink>
-          <NavbarLink as={Link} href="#" className="text-white font-bold hover:bg-[#b1b1b1] md:text-lg  md:hover:text-[#0D0D0D]">
+          <NavbarLink as={Link} href="/product" className="text-white font-bold hover:bg-[#b1b1b1] md:text-lg  md:hover:text-[#0D0D0D]">
             Products
           </NavbarLink>
           <NavbarLink as={Link} href="/team" className="text-white font-bold hover:bg-[#b1b1b1] md:text-lg  md:hover:text-[#0D0D0D]">

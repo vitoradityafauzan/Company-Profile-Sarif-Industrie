@@ -1,59 +1,35 @@
-// "use client";
 
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
-import { Suspense, useState, FC } from "react";
+import { Suspense } from "react";
 import { Button } from "flowbite-react";
 import Link from "next/link";
 import VideoComponent from "@/components/videoComp";
 import { Metadata } from "next";
 import CompanyMarquess from "@/components/companyMarquess";
-// bg-[url('/Back-Hero.jpeg')]  bg-gradient-to-b from-neutral-600 to-stone-400
 
 export const metadata: Metadata = {
   title: "Sarif Industries | Company Profile",
-  description: "Welcome To Sarif Industries Website"
-}
+  description: "Welcome To Sarif Industries Website",
+  icons: {icon: "/Sariflogoblack.png"},
+};
 
-const Home: FC = () => {
-  // const [compList, setCompList] = useState([
-  //   { name: "Tai Yong Medical", img: "/TaiYongMed.png" },
-  //   { name: "L.I.M.B", img: "/LIMB2.png" },
-  //   { name: "Bell Tower", img: "/BellTower2.png" },
-  //   { name: "Versa Life", img: "/VersaLife.png" },
-  //   { name: "A.R.C", img: "/ARC.png" },
-  //   { name: "W.H.O", img: "/who.png" },
-  //   { name: "UNATCO", img: "/UNATCO.png" },
-  //   { name: "FEMA", img: "/FEMA.webp" },
-  //   { name: "DOD", img: "/DOD.png" },
-  //   { name: "US Army", img: "/UsArmy.png" },
-  // ]);
+const Home = () => {
 
-  const linkVid1: string = "https://drive.google.com/file/d/1AgnIkrR8Ls_Ig87xyzGqLl3TfHVQOf3W/preview";
-
-  const linkVid2: string = "https://drive.google.com/file/d/1ky3zlVRQQP79CGl05txNN-nB7a1rEf-w/preview";
+  const linkVid1: string = "/video/Sarif-TV.mp4";
+  const linkVid2: string = "/video/Sarif-Testimony.mp4";
 
   return (
     <main className="flex min-h-screen flex-col gap-20 items-center p-0">
-      {/* bg-gradient-to-b from-neutral-600 to-neutral-500 */}
-      {/* Opening Greeting */}
-      {/* <div className="w-full h-[35rem] bg-[url('/wall-hero.jpg')] p-1 border-0 text-center content-start text-white">
-        <h1 className="text-4xl lg:text-5xl px-7 font-bold mt-20 tracking-wide">WELCOME TO SARIF INDUSTRIES</h1>
-        <div className="w-5/6 md:w-9/12 xl:w-3/6 h-2 rounded-md border-b-2 border-white mx-auto mt-1 mb-4"></div>
-        <h1 className="text-xl font-thin font-semibold tracking-widest">&quot; Envisioning a New Future &quot;</h1>
-      </div> */}
 
-      {/* Goals */}
-      {/* rounded-xl lg:rounded-[6rem] md:shadow-2xl border-t-2 border-b-2 md:border-0 */}
-      <div
-        className="w-full h-fit  px-2 py-4 md:p-6  flex flex-col justify-center items-center "
-        
-      >
+      {/* Hero */}
+      <div className="w-full h-fit  px-2 py-4 md:p-6  flex flex-col justify-center items-center ">
         <h1 className="text-[#0D0D0D] text-center tracking-wide text-2xl md:text-[2rem] font-extrabold ">Envisioning A New Future With </h1>
         <h1 className="text-white text-center tracking-wide text-2xl md:text-[2rem] font-bold mb-10">Augmentation Technology</h1>
-        <Suspense fallback={<h1>Loading video....</h1>}>
-          <VideoComponent linkk={linkVid1} />
-        </Suspense>
+        <div className="md:w-11/12 lg:w-8/12">
+          <Suspense fallback={<h1>Loading video....</h1>}>
+            <VideoComponent linkk={linkVid1} />
+          </Suspense>
+        </div>
       </div>
 
       {/* Company Exp */}
@@ -78,13 +54,6 @@ const Home: FC = () => {
           We also work alongside the Top Companies in the world and cooperate closely with local and international government bodies
         </h1>
         <CompanyMarquess />
-        {/* <Marquee play direction="right" speed={40} loop={0} className="">
-          {compList.map((list) => (
-            <div key={list.name}>
-              <Image src={list.img} alt={list.name} width={95} height={80} className="mx-6 my-0" />
-            </div>
-          ))}
-        </Marquee> */}
       </div>
 
       {/* CEO Exp */}
@@ -95,11 +64,11 @@ const Home: FC = () => {
         <div className="basis-1/2 content-center pt-10 px-5 md:p-6 border-0 md:border-b-8 md:border-t-2 border-white rounded text-sm text-[#0d0d0d] md:text-xl font-bold leading-relaxed">
           <p>
             It all started when our philanthropist CEO and Founder, David Sarif had a vision where technology would bring the next age of human evolution, as he put it,{" "}
-            <i className="italic text-white">&quot;The age of Better, Stronger, Faster And Smarter Future&quot;</i>. So, he started his journey by acquired a failing Detroit auto factory in 2007 and repurposed
-            it for the automated manufacture of prosthetics in the heart of Detroit City.
+            <i className="italic text-white">&quot;The age of Better, Stronger, Faster And Smarter Future&quot;</i>. So, he started his journey by acquired a failing Detroit auto factory in 2007 and
+            repurposed it for the automated manufacture of prosthetics in the heart of Detroit City.
           </p>
-          <Button color="light" pill as={Link} href="/about" className="md:w-2/6 mx-auto mt-10">
-            Learn More
+          <Button color="light" pill as={Link} href="/about" className="md:w-3/6 mx-auto mt-10">
+            Learn More About Our Company
           </Button>
         </div>
       </div>
@@ -107,28 +76,20 @@ const Home: FC = () => {
       {/* Testimonials */}
       <div
         className="w-11/12 h-fit border-t-2 border-b-2 md:border-0 px-2 py-4 md:p-6 rounded-xl lg:rounded-[6rem] bg-transparent md:shadow-2xl flex flex-col gap-10 justify-center items-center bg-neutral-600"
-        id="radial-blury"
       >
-        {/* <Image src="/DeusEx.png" alt="DeusEx Pic" width={350} height={250} /> */}
-        {/* <h1>We Are The No. 1 Company Leading The Augmentations Technology In The World</h1> */}
         <p className="text-center text-[#0d0d0d] text-4xl font-bold w-4/6">Hesited For The Future?</p>
-        <Suspense fallback={<h1>Loading video....</h1>}>
-          <VideoComponent linkk={linkVid2} />
-        </Suspense>
-        {/* <iframe
-          src="https://drive.google.com/file/d/1ky3zlVRQQP79CGl05txNN-nB7a1rEf-w/preview"
-          width={850}
-          height={480}
-          allow="autoplay"
-          className="w-full h-[13rem] md:h-[23rem] lg:w-5/6 lg:h-[26rem] xl:h-[36rem]"
-        ></iframe> */}
+        <div className="w-full lg:w-8/12">
+          <Suspense fallback={<h1>Loading video....</h1>}>
+            <VideoComponent linkk={linkVid2} />
+          </Suspense>
+        </div>
       </div>
 
       {/* Link To Store */}
       <div className="w-11/12 h-fit border-t-2 border-b-2 rounded mx-auto p-4 justify-center flex flex-col gap-7 text-center">
         <h1 className="tracking-wide text-white font-semibold text-3xl">Get Your Augmentation Now</h1>
-        <Button color="light" pill className="w-3/6 mx-auto" id="radial-blurry">
-          Visit Our Store
+        <Button as={Link} href="/product" color="light" pill className="w-4/6 md:w-3/6 mx-auto">
+          Visit To View Our Best-Selling
         </Button>
       </div>
     </main>

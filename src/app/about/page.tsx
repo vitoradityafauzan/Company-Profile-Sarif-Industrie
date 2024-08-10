@@ -4,6 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sarif Industries | About",
   description: "In This Page, We Explain About Our Company, History, And Working Environment Here At Sarif Industries",
+  icons: {icon: "/Sariflogoblack.png"},
 };
 
 export default function About() {
