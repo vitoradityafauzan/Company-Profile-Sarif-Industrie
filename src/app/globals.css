@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+/* 
+body {
+  background: rgb(82,82,82);
+  background: linear-gradient(190deg, rgba(82,82,82,1) 0%, rgba(168,162,158,1) 100%);
+padding: 0;
+} */
+
+body {
+  background: #c7c7c7;
+/* background: linear-gradient(180deg, rgba(217,160,54,1) 0%, rgba(242,231,80,1) 100%); */
+}
+
+#gradient-top {
+  background: rgb(255,255,255);
+background: radial-gradient(circle at top left, rgba(255,255,255,1) 0%, rgba(242,231,80,1) 23%);
+}
+
+#radial-blurry {
+  background: rgb(217,160,54);
+background: linear-gradient(180deg, rgba(217,160,54,1) 30%, rgba(254,239,33,1) 100%);
+}
+
+#photo-banner {
+  background: rgb(255,255,255);
+  background: linear-gradient(146deg, rgba(255,255,255,1) 0%, rgba(255,251,159,1) 100%);
+}
