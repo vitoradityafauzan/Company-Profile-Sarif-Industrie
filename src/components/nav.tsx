@@ -8,7 +8,7 @@ export default function Nav() {
     <div className="w-full h-fit ">
       <Navbar fluid className="bg-transparent backdrop-blur-sm	 p-4 ">
         <NavbarBrand as={Link} href="/">
-          <Image src="/sariflogoblack.png" className="mr-3" width={44} height={44} alt="Flowbite React Logo" />
+          <Image src="/Sariflogoblack.png" className="mr-3" width={44} height={44} alt="Sarif Industries Logo" />
           <span className="self-center whitespace-nowrap text-lg sm:text-2xl font-bold text-[#0D0D0D]">SARIF INDUSTRIES</span>
         </NavbarBrand>
         <NavbarToggle />
