@@ -31,7 +31,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 
 ENV Format:
-- BASE_URL_CONTENTFU
+- BASE_URL_CONTENTFUL
 - SPACE_ID_CONTENTFUL
 - TOKEN_CONTENTFUL
 
